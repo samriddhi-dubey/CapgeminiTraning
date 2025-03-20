@@ -4,8 +4,15 @@
 //arr.length - access length of rows in 2d array
 //arr[row][coloumn]
 
+// int arr[][]={{1,2,3},
+//              {4,5,6},
+//              {7,8,9}}
+
+//Arrays.deepEquals(arr1,aar2)
+
 package day7;
 
+//import java.util.Arrays;
 import java.util.Scanner;
 
 public class TwoDArrays {
@@ -24,12 +31,29 @@ public class TwoDArrays {
 				arr[i][j] = sc.nextInt();
 			}
 		}
-		for (int i = 0; i < r; i++) {
-			for (int j = 0; j < c; j++) {
-				System.out.print(arr[i][j] + " ");
+//		for (int i = 0; i < r; i++) {
+//			for (int j = 0; j < c; j++) {
+//				System.out.print(arr[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
+		for (int[] i : arr) {
+			for (int j : i) {
+				System.out.print(j + " ");
 			}
 			System.out.println();
+
 		}
+
+//		System.out.println(Arrays.deepToString(arr));
+//
+//		for (int i : arr[r - 1]) {
+//			for (int j : arr[c - 1]) {
+//				System.out.print(i);
+//			}
+//			System.out.println();
+//
+//		}
 
 		sc.close();
 	}
