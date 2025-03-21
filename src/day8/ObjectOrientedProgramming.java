@@ -42,12 +42,24 @@ constructor of another class cannot be created in some  other  class.
 
 Object is created duering runtime onlyy.
 
-local variable and a non-static variable can be differed using the this keyword
+THIS keyword-local variable and a non-static variable can be differed using the this keyword. This keyword can be used in any non-static block.
+            -cannot be used in static blocks.
 
 
 Constructor chaining- process oof calling one constructor inside another constructor
 can be done using two statements- 1. this call statement- perform constructor chaining within the same class
                                   2. super call statement- performing constructor chaining between parent class and child class
+
+                                  
+Rules for "this calling statement":
+1. We can have only one tc statement in one constructor.
+2. Tc statement should be used only inside a constructor.
+3. Tc statement must always be the first statement inside the constructor.
+4. A contructor can have either have this call statement or super call statement NOT both.
+5. If a progarmmer fails to add a tc statement inside a constructor, then java compiler will not add a tc statement implicitly,
+unlike default constructor.
+6. If there are n constructors in a class, then we can use upto n-1 tc statements.(If n constructors used-
+recursive calling of constructor resulting in stack overflow)
                                   
                                   
 */
