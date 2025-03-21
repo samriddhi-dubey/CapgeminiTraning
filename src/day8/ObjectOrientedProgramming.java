@@ -1,44 +1,56 @@
-//An object is an instance of a class. it is a block of memmory conataining heterogeneous non-static variables and methods.
+/*
+ * 
+ * An object is an instance of a class. it is a block of memmory conataining heterogeneous non-static variables and methods.
 
-//Enacpsulation-securing the code,
+Enacpsulation-securing the code.
 
-//non-static methods/object methods/instance methods- object of a class can be replicated
-//variables declared inside the block of the class without using the "static" keyword-non static variables.
+non-static methods/object methods/instance methods- object of a class can be replicated
+variables declared inside the block of the class without using the "static" keyword-non static variables.
 
-//class Book{
-//String name;String author;int price;
-//}
-//
-//public void reading(){
-//sop("reading")
-//}
+class Book{
+String name;String author;int price;
+}
 
-//ClassName obj=new ClassName();
-//variables used to store the reference of the object is known as reference  variables
+public void reading(){
+sop("reading")
+}
 
-//Syntax:
-//new ClassName"([formal args])"--> constructor calling statement --> calls a constructor -->all the non-static members of the class are loaded into the object and 
-//the variables are initialized with default values
+ClassName obj=new ClassName();
+variables used to store the reference of the object is known as reference  variables
 
-//new-keyword for the creation of an object. assigns an address to the object which is known as the object reference. any number of objects can be created
-//Every object will have a unique reference.
+Syntax:
+new ClassName"([formal args])"--> constructor calling statement --> calls a constructor -->all the non-static members of the class are loaded into the object and 
+the variables are initialized with default values
 
-//A copy  of non static variables and methods will be created to every object. If any method of variable is modified in an object, 
-//the changes are not done for the other objects
+new-keyword for the creation of an object. assigns an address to the object which is known as the object reference. any number of objects can be created
+Every object will have a unique reference.
 
-//reference variable can be of any type. it depends on the scope and modifier in which it is created.
+A copy  of non static variables and methods will be created to every object. If any method of variable is modified in an object, 
+the changes are not done for the other objects
 
-//constructor is a specialized non-static method  whose name is same as class Name and does not have a return type.
-//----specfies which obj has to be loaded.
-//Synatx of a contructor:
-//[Access Modifier] className([formal args])
+reference variable can be of any type. it depends on the scope and modifier in which it is created.
 
-//When a constructor is not created in the class, the compiler creates a default constructor.
-//parameterized, non-parameterized constructor
+constructor is a specialized non-static method  whose name is same as class Name and does not have a return type.
+----specfies which obj has to be loaded.
+Synatx of a contructor:
+[Access Modifier] className([formal args])
 
-//constructor of another class cannot be created in some  other  class.
+When a constructor is not created in the class, the compiler creates a default constructor.
+parameterized, non-parameterized constructor
 
-//Object is created duering runtime onlyy.
+constructor of another class cannot be created in some  other  class.
+
+Object is created duering runtime onlyy.
+
+local variable and a non-static variable can be differed using the this keyword
+
+
+Constructor chaining- process oof calling one constructor inside another constructor
+can be done using two statements- 1. this call statement- perform constructor chaining within the same class
+                                  2. super call statement- performing constructor chaining between parent class and child class
+                                  
+                                  
+*/
 package day8;
 
 public class ObjectOrientedProgramming {
