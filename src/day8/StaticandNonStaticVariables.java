@@ -13,7 +13,7 @@ Non-static variables- variables directly declared within the class without prefi
                     - a copy of all non-static variables will be present in every object you create. 
                     - memory for non-static variables is alloacated inside object in heap area.  
                     - accessed with the help of object reference.
-                    - can be accessed oonly inside non-static context/methods.
+                    - can be accessed  only inside non-static context/methods.
                     - can be accessed directly inside the class without the help of object reference inside a non-static context only.
                     If it has to be accessed inside a static context, then it is done with the help of object reference.
                     - non-static variables of one class can be accessed in another class with the help of object refernce in both contexts. 
