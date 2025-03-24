@@ -22,17 +22,62 @@ public class User {
 			System.out.println("Arraay filled");
 		}
 	}
-	public void removePost(Post post) {
-	   Scanner sc=new Scanner(System.in);
-	   System.out.println("Enter the id to delete");
-	   int id=sc.nextInt();
-	   
-		
+
+//	public void removePost(Post post) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter the id to delete");
+//		int id = sc.nextInt();
+//
+//		boolean found = false;
+//
+//		for (int i = 0; i < count; i++) {
+//			if (posts[i].getPostID() == id) {
+//
+//				for (int j = i; j < count - 1; j++) {
+//					posts[j] = posts[j + 1];
+//				}
+//
+//				count--;
+//				found = true;
+//				System.out.println("Post with ID " + id + " has been removed.");
+//				break;
+//			}
+//		}
+//
+//		if (!found) {
+//			System.out.println("Post with ID " + id + " not found.");
+//		}
+//	}
+	
+	public void updatePost(Post post) {
+		 Scanner sc = new Scanner(System.in);
+		    System.out.println("Enter the ID of the post to update:");
+		    int id = sc.nextInt();
+		    sc.nextLine(); // consume the newline
+
+		    boolean found = false;
+
+		    for (int i = 0; i < count; i++) {
+		        if (posts[i].getPostID() == id) {
+		            System.out.println("Current content: " + posts[i].getPostDescription());
+		            System.out.println("Enter new content:");
+		            String newContent = sc.nextLine();
+		            posts[i].setPostDescription(newContent);
+		            System.out.println("Post updated successfully.");
+		            found = true;
+		            break;
+		        }
+		    }
+
+		    if (!found) {
+		        System.out.println("Post with ID " + id + " not found.");
+		    }
+	  	
 	}
 
 	public void displayPost() {
 		for (int i = 0; i < count; i++) {
-			System.out.println(posts[i].postID + " " + posts[i].postDescription);
+			System.out.println(posts[i].getPostID() + " " + posts[i].getPostDescription());
 		}
 
 	}
