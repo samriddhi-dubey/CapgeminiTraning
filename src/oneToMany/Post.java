@@ -1,5 +1,7 @@
 package oneToMany;
 
+//one user-many posts
+
 public class Post {
 	private String postDescription;
 	

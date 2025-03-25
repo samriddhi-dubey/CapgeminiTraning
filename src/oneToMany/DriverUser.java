@@ -1,5 +1,7 @@
 package oneToMany;
 
+//one user-many posts
+
 import java.util.Scanner;
 
 public class DriverUser {
@@ -31,7 +33,7 @@ public class DriverUser {
 
 			case 2:
 				System.out.println("Updating a post...");
-				user.updatePost(null); // `null` because updatePost method will handle input
+				user.updatePost(null); 
 				break;
 
 			case 4:

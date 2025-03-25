@@ -1,5 +1,7 @@
 package composition;
 
+//create battery class first
+
 public class Phone {
 	String phoneName;
 

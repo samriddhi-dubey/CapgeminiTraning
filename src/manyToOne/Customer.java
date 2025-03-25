@@ -1,5 +1,6 @@
 package manyToOne;
 
+// one bank-many customers
 public class Customer {
 	int id;
 	String customerName;

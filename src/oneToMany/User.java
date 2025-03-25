@@ -2,6 +2,8 @@ package oneToMany;
 
 import java.util.Scanner;
 
+//one user-many posts
+
 public class User {
 
 	Post[] posts;
@@ -48,31 +50,32 @@ public class User {
 //			System.out.println("Post with ID " + id + " not found.");
 //		}
 //	}
-	
+
 	public void updatePost(Post post) {
-		 Scanner sc = new Scanner(System.in);
-		    System.out.println("Enter the ID of the post to update:");
-		    int id = sc.nextInt();
-		    sc.nextLine(); // consume the newline
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the ID of the post to update:");
+		int id = sc.nextInt();
+		sc.nextLine();
 
-		    boolean found = false;
+		boolean found = false;
 
-		    for (int i = 0; i < count; i++) {
-		        if (posts[i].getPostID() == id) {
-		            System.out.println("Current content: " + posts[i].getPostDescription());
-		            System.out.println("Enter new content:");
-		            String newContent = sc.nextLine();
-		            posts[i].setPostDescription(newContent);
-		            System.out.println("Post updated successfully.");
-		            found = true;
-		            break;
-		        }
-		    }
+		for (int i = 0; i < count; i++) {
+			if (posts[i].getPostID() == id) {
+				System.out.println("Current content: " + posts[i].getPostDescription());
+				System.out.println("Enter new content:");
+				String newContent = sc.nextLine();
+				posts[i].setPostDescription(newContent);
+				System.out.println("Post updated successfully.");
+				found = true;
+				break;
+			}
+		}
 
-		    if (!found) {
-		        System.out.println("Post with ID " + id + " not found.");
-		    }
-	  	
+		if (!found) {
+			System.out.println("Post with ID " + id + " not found.");
+		}
+		sc.close();
+
 	}
 
 	public void displayPost() {

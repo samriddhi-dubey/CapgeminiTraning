@@ -1,5 +1,7 @@
 package manyToOne;
 
+//one bank-many customers
+
 public class Driver {
 	
 	public static void main(String[] args) {

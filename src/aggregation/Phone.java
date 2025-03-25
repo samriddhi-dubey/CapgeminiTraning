@@ -1,5 +1,7 @@
 package aggregation;
 
+//create sim class first
+
 public class Phone {
 	
 	String name;
