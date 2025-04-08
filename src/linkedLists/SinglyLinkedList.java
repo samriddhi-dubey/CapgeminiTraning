@@ -39,17 +39,32 @@ public class SinglyLinkedList {
 	}
 
 	public void insertAtPosition(int pos, int newData) {
+
 		Node newNode = new Node(newData);
 		newNode.data = newData;
 		newNode.next = null;
 
 		if (pos < 1 || pos > count + 1) {
 			System.out.println("Invalid");
+		} else if (head == null) {
+			head = newNode;
+			tail = newNode;
+			count++;
+			System.out.println("inserted");
+
+			return;
+
 		} else if (pos == 1) {
 			newNode.next = head;
 			head = newNode;
 			count++;
-		} else {
+			System.out.println("inserted");
+		}
+		else if (pos == count) {
+			insert(newData);
+		}
+
+		else {
 			Node temp = head;
 			while (--pos > 1) {
 				temp = temp.next;
@@ -57,7 +72,7 @@ public class SinglyLinkedList {
 			newNode.next = temp.next;
 			temp.next = newNode;
 			count++;
-
+			System.out.println("inserted");
 		}
 	}
 
@@ -78,6 +93,29 @@ public class SinglyLinkedList {
 			System.out.println("update");
 
 		}
+	}
+
+	public void deleteAtPosition(int pos) {
+
+		if (head == null || pos < 0) {
+			System.out.println("Invalid position or empty list.");
+			return;
+		}
+		if (pos == 0) {
+			head = head.next;
+			return;
+		}
+
+		Node current = head;
+		for (int i = 0; i < pos - 1 && current != null; i++) {
+			current = current.next;
+		}
+		if (current == null || current.next == null) {
+			System.out.println("Position out of bounds.");
+			return;
+		}
+		current.next = current.next.next;
+		System.out.println("Deleted");
 	}
 
 }

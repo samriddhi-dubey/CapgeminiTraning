@@ -8,7 +8,7 @@ public class Driver {
 		SinglyLinkedList list = new SinglyLinkedList();
 		boolean flag = true;
 		while (flag) {
-			System.out.println("Enter 1 to insert data\nEnter 2 to display\nEnter 3 to exit\nEnter 4 to update\nEnter 5 to insert at specific position ");
+			System.out.println("Enter 1 to insert data\nEnter 2 to display\nEnter 3 to exit\nEnter 4 to update\nEnter 5 to insert at specific position\nEnter 6 to delete at specific position ");
 			int choice = sc.nextInt();
 			
 			switch (choice) {
@@ -31,8 +31,10 @@ public class Driver {
 				list.update(3, 11);
 				break;
 			case 5:
-				list.insertAtPosition(3, 11);
+				list.insertAtPosition(3, 21);
 				break;
+			case 6:
+				list.deleteAtPosition(2);
 			}
 		}
 	}
